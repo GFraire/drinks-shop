@@ -1,6 +1,8 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from "vue";
+import App from "./App.vue";
 
-import './assets/main.css'
+import "./global.css";
+import "vuetify/styles";
+import vuetify from "./plugins/vuetify";
 
-createApp(App).mount('#app')
+createApp(App).use(vuetify).mount("#app");
