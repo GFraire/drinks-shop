@@ -4,13 +4,13 @@
       v-if="state.windowWidth > 500"
       class="d-flex align-center bg-white pa-2 rounded-lg"
     >
-      <img src="../assets/search.svg" alt="Procurar" />
+      <img src="assets/search.svg" alt="Procurar" />
     </button>
     <button v-else class="d-flex align-center bg-white pa-2 rounded-lg">
-      <img src="../assets/list.svg" alt="Menu" />
+      <img src="assets/list.svg" alt="Menu" />
     </button>
 
-    <img class="logo" src="../assets/logo.png" alt="Logo" />
+    <img class="logo" src="assets/logo.png" alt="Logo" />
 
     <div class="d-flex align-center">
       <div class="login d-flex align-center mr-6">
@@ -21,7 +21,7 @@
 
       <div class="cart d-flex align-center bg-white py-2 px-4 rounded-lg">
         <button class="d-flex align-center">
-          <img src="../assets/cart.svg" alt="Carrinho" />
+          <img src="assets/cart.svg" alt="Carrinho" />
         </button>
         <span>R$64,03</span>
       </div>
