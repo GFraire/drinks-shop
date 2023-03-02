@@ -7,11 +7,16 @@
       <template v-slot:text>{{ card.text }}</template>
     </Card>
   </div>
+
+  <div class="items mt-8">
+    <Whisky />
+  </div>
 </template>
 
 <script setup>
 import Card from "./components/Card.vue";
 import Header from "./components/Header.vue";
+import Whisky from "./components/Whisky.vue";
 
 const cards = [
   {
@@ -35,6 +40,11 @@ const cards = [
 <style scoped>
 .introduction {
   gap: 1rem;
+  max-width: 1232px;
+  margin: auto;
+  padding: 0 1rem;
+}
+.items {
   max-width: 1232px;
   margin: auto;
   padding: 0 1rem;

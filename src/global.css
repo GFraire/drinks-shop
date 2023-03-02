@@ -4,6 +4,8 @@
   --primary-2: #23262f;
   --primary-4: #ededed;
 
+  --background: #f6f6f5;
+
   --secondary-1: #396a65;
   --secondary-2: #79dde8;
   --secondary-3: #ef8d65;
@@ -11,4 +13,8 @@
 
 * {
   font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--background);
 }

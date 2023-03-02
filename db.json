@@ -1,0 +1,36 @@
+{
+  "whiskys": [
+    {
+      "title": "Bourbon",
+      "img": "assets/bourbon.png",
+      "description": "Buffalo Trace Bourbon Cream 750ml",
+      "price": 120.95,
+      "old_price": 130.95
+    },
+    {
+      "title": "Negroni",
+      "img": "assets/negroni.png",
+      "description": "Campari Negroni 500 ml",
+      "price": 137.89
+    },
+    {
+      "title": "Jack Daniel's",
+      "img": "assets/jack.png",
+      "description": "Jack Daniel's 1000 ml",
+      "price": 132.91,
+      "old_price": 137.82
+    },
+    {
+      "title": "Chivas",
+      "img": "assets/chivas.png",
+      "description": "Chivas 12 anos 750 ml",
+      "price": 133.8
+    },
+    {
+      "title": "White Horse",
+      "img": "assets/white-horse.png",
+      "description": "White Horse 1000 ml",
+      "price": 83.51
+    }
+  ]
+}
