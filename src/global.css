@@ -2,13 +2,18 @@
   --primary-0: #797979;
   --primary-1: #474b57;
   --primary-2: #23262f;
+  --primary-3: #0c0e12;
   --primary-4: #ededed;
+  --primary-5: #a7a7a7;
 
   --background: #f6f6f5;
 
   --secondary-1: #396a65;
   --secondary-2: #79dde8;
   --secondary-3: #ef8d65;
+
+  --good: #3a9e56;
+  --error: #c74343;
 }
 
 * {
@@ -17,4 +22,9 @@
 
 body {
   background-color: var(--background);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-2);
 }

@@ -5,5 +5,6 @@ import "./global.css";
 import "vuetify/styles";
 import vuetify from "./plugins/vuetify";
 import pinia from "./plugins/pinia";
+import router from "./plugins/router";
 
-createApp(App).use(vuetify).use(pinia).mount("#app");
+createApp(App).use(vuetify).use(pinia).use(router).mount("#app");

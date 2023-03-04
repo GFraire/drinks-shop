@@ -28,6 +28,7 @@ interface ItemData {
   description: string;
   price: number;
   old_price?: number;
+  orders: number;
 }
 
 interface propsData {
@@ -40,6 +41,7 @@ const store = useProductStore();
 
 function handleAddProduct(product: ItemData) {
   store.handleIncrementCartValue(product);
+  store.handleAddProduct(product);
 }
 </script>
 

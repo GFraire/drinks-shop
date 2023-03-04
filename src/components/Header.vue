@@ -10,7 +10,9 @@
       <img src="assets/list.svg" alt="Menu" />
     </button>
 
-    <img class="logo" src="assets/logo.png" alt="Logo" />
+    <router-link to="/" class="d-flex align-center justify-center">
+      <img class="logo" src="assets/logo.png" alt="Logo" />
+    </router-link>
 
     <div class="d-flex align-center">
       <div class="login d-flex align-center mr-6">
@@ -19,18 +21,24 @@
         <button>Criar conta</button>
       </div>
 
-      <div class="cart d-flex align-center bg-white py-2 px-4 rounded-lg">
-        <button class="d-flex align-center">
-          <img src="assets/cart.svg" alt="Carrinho" />
-        </button>
-        <span>{{ store.formattedValue }}</span>
-      </div>
+      <HeaderMenu v-slot="slotProps">
+        <div
+          v-bind="slotProps.props"
+          class="cart d-flex align-center bg-white py-2 px-4 rounded-lg"
+        >
+          <button class="d-flex align-center">
+            <img src="assets/cart.svg" alt="Carrinho" />
+          </button>
+          <span>{{ store.formattedValue }}</span>
+        </div>
+      </HeaderMenu>
     </div>
   </header>
 </template>
 
 <script setup>
-import { watch, reactive } from "vue";
+import HeaderMenu from "../components/HeaderMenu.vue";
+import { watch, reactive, ref } from "vue";
 import { useDisplay } from "vuetify";
 import { useProductStore } from "../store/product";
 
@@ -39,6 +47,8 @@ const store = useProductStore();
 const { width } = useDisplay();
 
 const state = reactive({ windowWidth: width.value });
+
+const isMeuOpen = ref(false);
 
 watch(width, (val) => {
   state.windowWidth = val;
@@ -66,6 +76,7 @@ header {
 }
 .cart {
   gap: 0.5rem;
+  cursor: pointer;
 }
 .cart span {
   font-weight: 600;
