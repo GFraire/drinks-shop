@@ -23,7 +23,7 @@
         <button class="d-flex align-center">
           <img src="assets/cart.svg" alt="Carrinho" />
         </button>
-        <span>R$64,03</span>
+        <span>{{ store.formattedValue }}</span>
       </div>
     </div>
   </header>
@@ -32,6 +32,10 @@
 <script setup>
 import { watch, reactive } from "vue";
 import { useDisplay } from "vuetify";
+import { useProductStore } from "../store/product";
+
+const store = useProductStore();
+
 const { width } = useDisplay();
 
 const state = reactive({ windowWidth: width.value });
@@ -43,7 +47,10 @@ watch(width, (val) => {
 
 <style scoped>
 header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
   background-color: var(--primary-4);
 }
 .login {

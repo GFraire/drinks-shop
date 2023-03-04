@@ -20,6 +20,7 @@
 
 <script setup lang="ts">
 import { defineProps } from "vue";
+import { useProductStore } from "../store/product";
 
 interface ItemData {
   title: string;
@@ -35,8 +36,10 @@ interface propsData {
 
 defineProps<propsData>();
 
+const store = useProductStore();
+
 function handleAddProduct(product: ItemData) {
-  console.log(product);
+  store.handleIncrementCartValue(product);
 }
 </script>
 
